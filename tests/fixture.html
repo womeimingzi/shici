@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><title>拾词 · Chrome 取词测试</title>
+<style>body{max-width:850px;margin:60px auto;font:18px/1.8 system-ui;background:#f4f7f5;color:#244634}article{background:white;border:1px solid #dbe4df;border-radius:14px;padding:30px;margin:20px 0}button,a{font:inherit;padding:8px 16px;margin:8px;cursor:pointer}textarea{display:block;width:95%;height:100px;padding:14px;font:16px/1.6 system-ui}h1{font-size:30px}small{color:#718277}</style>
+<h1>拾词 · Chrome 取词测试</h1><small>本页素材只在本机提供。点击选区按钮后，按 Alt + E；启用自动翻译时，所选内容会发送到你配置的模型接口。</small>
+<article><p id="sample">A faithful translation begins with accurate source text. 中文测试：α + β = 42，保留数字、标点与 emoji 🙂。</p><button id="select" onclick="const r=document.createRange();r.selectNodeContents(document.querySelector('#sample'));const s=getSelection();s.removeAllRanges();s.addRange(r);">选中测试段落</button><button id="clear" onclick="getSelection().removeAllRanges();document.activeElement.blur();">清空选区</button><a href="/fixture.pdf" target="_blank">打开 PDF 测试</a></article>
+<article><label for="paste">剪贴板恢复检查：复制种子文字后取词，再在这里粘贴。</label><textarea id="paste" placeholder="这里应仍然得到取词前的剪贴板内容"></textarea><p id="seed">SHICI_CLIPBOARD_SEED_2026</p><button onclick="const r=document.createRange();r.selectNodeContents(document.querySelector('#seed'));const s=getSelection();s.removeAllRanges();s.addRange(r);">选中剪贴板种子</button></article>
+</html>

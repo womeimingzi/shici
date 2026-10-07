@@ -1,0 +1,17 @@
+/dist/
+/*.exe
+/*.exe.config
+/shici.ico
+*.lnk
+*.tmp
+*.log
+/.vs/
+/bin/
+/obj/
+/settings.json
+/window.json
+/.env
+/.env.*
+/credentials*
+*.pfx
+*.p12
